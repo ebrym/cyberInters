@@ -1,0 +1,124 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/abdullahi/Projects/cyberinterns/basicTypes/basicTypes.csproj": {}
+  },
+  "projects": {
+    "/Users/abdullahi/Projects/cyberinterns/basicTypes/basicTypes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/abdullahi/Projects/cyberinterns/basicTypes/basicTypes.csproj",
+        "projectName": "basicTypes",
+        "projectPath": "/Users/abdullahi/Projects/cyberinterns/basicTypes/basicTypes.csproj",
+        "packagesPath": "/Users/abdullahi/.nuget/packages/",
+        "outputPath": "/Users/abdullahi/Projects/cyberinterns/basicTypes/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/abdullahi/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "/Users/abdullahi/Projects/cyberinterns/cyberinterns/cyberinterns.csproj": {
+                "projectPath": "/Users/abdullahi/Projects/cyberinterns/cyberinterns/cyberinterns.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/abdullahi/Projects/cyberinterns/cyberinterns/cyberinterns.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/abdullahi/Projects/cyberinterns/cyberinterns/cyberinterns.csproj",
+        "projectName": "cyberinterns",
+        "projectPath": "/Users/abdullahi/Projects/cyberinterns/cyberinterns/cyberinterns.csproj",
+        "packagesPath": "/Users/abdullahi/.nuget/packages/",
+        "outputPath": "/Users/abdullahi/Projects/cyberinterns/cyberinterns/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/abdullahi/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.301/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
