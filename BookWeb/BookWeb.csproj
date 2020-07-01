@@ -22,5 +22,7 @@
 
   <ItemGroup>
     <Folder Include="Views\Author\" />
+    <Folder Include="Views\Account\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>

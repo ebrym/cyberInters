@@ -1,4 +1,12 @@
-﻿<!DOCTYPE html>
+﻿
+@using Microsoft.AspNetCore.Identity
+@using BookWeb.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +19,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="~assets/images/favicon.png">
     <!--  <title>Admin Pro Admin Template - The Ultimate Bootstrap 4 Admin Template</title>
-   Bootstrap Core CSS -->
+    Bootstrap Core CSS -->
     <link href="~/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- This page CSS -->
     <!-- chartist CSS -->
@@ -32,6 +40,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <title> @ViewData["Title"] </title>
+
+    <link rel="stylesheet" href="~/css/loading.css">
+    <link href="~/sweetAlert/sweetalert.css" rel="stylesheet" />
+    <script src="~/sweetAlert/sweetalert.min.js"></script>
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
@@ -57,13 +69,14 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="index.html"><b>
-                        <!-- Logo icon 
-                            <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
-                        Book Store
+                    <a class="navbar-brand" href="index.html">
+                        <b>
+                            <!-- Logo icon
+                                <img src="../assets/images/logo-icon.png" alt="homepage" class="dark-logo" />-->
+                            Book Store
                         </b>
                         <!--End Logo icon -->
-                        <!-- Logo text 
+                        <!-- Logo text
                         <span>
                             <img src="../assets/images/logo-text.png" alt="homepage" class="dark-logo" />
                         </span>-->
@@ -97,7 +110,10 @@
                         <!-- Profile -->
                         <!-- ============================================================== -->
                         <li class="nav-item">
-                            <a class="nav-link waves-effect waves-dark" href="#"><img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                            <a class="nav-link waves-effect waves-dark" href="#">Welcome @UserManager.GetUserName(User) !<img src="../assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                        </li>
+                        <li class="nav-item">
+                            <a asp-controller="Account" asp-action="LogOut" class="nav-link waves-effect waves-dark">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -116,8 +132,8 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li> <a class="waves-effect waves-dark" href="index.html" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a></li>
-                        <li> <a asp-controller="Author" asp-action="Index" class="waves-effect waves-dark"  aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Author</span></a></li>
-                       
+                        <li> <a asp-controller="Author" asp-action="Index" class="waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Author</span></a></li>
+
                         <li> <a class="waves-effect waves-dark" href="table-basic.html" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Table</span></a></li>
                         <li> <a class="waves-effect waves-dark" href="icon-material.html" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Icons</span></a></li>
                         <li> <a class="waves-effect waves-dark" href="map-google.html" aria-expanded="false"><i class="mdi mdi-earth"></i><span class="hide-menu">Map</span></a></li>
@@ -143,9 +159,12 @@
                 <!-- ============================================================== -->
                 <!-- Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
-             
+
                 <partial name="_CookieConsentPartial" />
-                    @RenderBody()
+                <partial name="_NotificationPanel" />
+                @RenderBody()
+
+                <partial name="_Loading" />
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
@@ -158,9 +177,9 @@
             <!-- End footer -->
             <!-- ============================================================== -->
         </div>
-    <!-- ============================================================== -->
-    <!-- End Page wrapper  -->
-    <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Wrapper -->
@@ -190,7 +209,12 @@
     <script src="/assets/plugins/c3-master/c3.min.js"></script>
     <!-- Chart JS -->
     <script src="js/dashboard.js"></script>
-
+    <script type="text/javascript">$(document).on('submit', 'form', function () {
+            displayBusyIndicator();
+        });
+        function displayBusyIndicator() {
+            $('.loading').show();
+        }</script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

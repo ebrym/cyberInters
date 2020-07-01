@@ -16,11 +16,13 @@
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/BookWeb.TagHelpers.input.cache
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/BookWeb.TagHelpers.output.cache
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/BookWeb.RazorCoreGenerate.cache
+/Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Account/login.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Author/Create.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Author/Index.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Home/Privacy.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.cshtml.g.cs
+/Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_AccountLayout.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_CookieConsentPartial.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
@@ -33,3 +35,4 @@
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/BookWeb.pdb
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/BookWeb.genruntimeconfig.cache
 /Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/BookWeb.csproj.CopyComplete
+/Users/abdullahi/Projects/cyberinterns/BookWeb/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_NotificationPanel.cshtml.g.cs

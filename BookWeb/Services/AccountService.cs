@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -6,6 +7,9 @@ using System.Threading.Tasks;
 using BookWeb.Dtos;
 using BookWeb.Entities;
 using BookWeb.Interface;
+using BookWeb.Models;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -100,6 +104,56 @@ namespace BookWeb.Services
             {
                 return signInDetails;
             }
-}
+        }
+        public async Task<bool> LoginIn(LoginViewModel loginDetails)
+        {
+         
+            try
+            {
+                // check if user exist
+                var checkUser = await _userManager.FindByEmailAsync(loginDetails.Email);
+
+                if (checkUser != null)
+                {
+                    //signin user
+                    var signInResult = await _signInManager.PasswordSignInAsync(checkUser, loginDetails.Password, false, false);
+                    // check if signin is successful
+                    if (signInResult.Succeeded)
+                    {
+                        return true;
+                        //var claim = new List<Claim>
+                        //    {
+                        //    new Claim(ClaimTypes.NameIdentifier, checkUser.Id.ToString()),
+                        //    new Claim(ClaimTypes.Name, checkUser.UserName),
+                        //    new Claim(ClaimTypes.Email , checkUser.Email),
+                        //    new Claim(ClaimTypes.GivenName, checkUser.FullName),
+                        //    };
+
+                        //var principal = new ClaimsPrincipal(new ClaimsIdentity(claim, checkUser.Email));
+
+                        //var props = new AuthenticationProperties();
+                        //props.IsPersistent  = true;
+
+
+                        //await HttpContext.SignAsync(CookieAuthenticationDefaulsts)
+
+                        //signInDetails.Email = checkUser.Email;
+                        //signInDetails.FirstName = checkUser.FirstName;
+                        //signInDetails.LastName = checkUser.LastName;
+                        //signInDetails.Username = checkUser.UserName;
+                        //signInDetails.Token = tokenHandler.WriteToken(token);
+                        //signInDetails.Expires = Expires;
+
+
+                    }
+
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
     }
 }
