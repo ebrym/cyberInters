@@ -25,6 +25,5 @@ namespace BookWeb.Entities
             set { dateCreated = value; }
 
         }
-
 }
 }

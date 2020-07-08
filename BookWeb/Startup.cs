@@ -54,6 +54,7 @@ namespace BookWeb
 
 
             services.AddScoped<IAuthor, AuthorService>();
+            services.AddScoped<IBook, BookService>();
             services.AddScoped<IUser, UserService>();
 
             services.AddScoped<IAccount, AccountService>();
